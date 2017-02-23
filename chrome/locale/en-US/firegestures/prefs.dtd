@@ -32,6 +32,9 @@
 <!ENTITY wheelGesture.down.left "Scroll down with holding left-button">
 <!ENTITY wheelGesture.down.middle "Scroll down with holding middle-button">
 <!ENTITY wheelGesture.down.right "Scroll down with holding right-button">
+<!ENTITY hwheelGesture "Horizontal Wheel Gestures">
+<!ENTITY hwheelGesture.left "Scroll Left">
+<!ENTITY hwheelGesture.right "Scroll Right">
 <!ENTITY rockerGesture "Rocker Gestures">
 <!ENTITY rockerGesture.left "Left-click with holding right-button">
 <!ENTITY rockerGesture.right "Right-click with holding left-button">

@@ -144,13 +144,14 @@ xdGestureHandler.prototype = {
 		this._swipeTimeout   = getPref("swipe_timeout");
 		this._mouseGestureEnabled    = getPref("mousegesture");
 		this._wheelGestureEnabled    = getPref("wheelgesture");
+		this._hwheelGestureEnabled   = getPref("hwheelgesture");
 		this._rockerGestureEnabled   = getPref("rockergesture");
 		this._keypressGestureEnabled = getPref("keypressgesture");
 		this._swipeGestureEnabled    = getPref("swipegesture");
 		// prefs for wheel gestures and rocker gestures
 		this._drawArea.removeEventListener("DOMMouseScroll", this, true);
 		this._drawArea.removeEventListener("click", this, true);
-		if (this._wheelGestureEnabled)
+		if (this._wheelGestureEnabled || this._hwheelGestureEnabled)
 			this._drawArea.addEventListener("DOMMouseScroll", this, true);
 		if (this._rockerGestureEnabled)
 			this._drawArea.addEventListener("click", this, true);
@@ -354,6 +355,15 @@ xdGestureHandler.prototype = {
 					event.preventDefault();
 					// required to suppress page scroll if using SmoothWheel or Yet Another Smooth Scrolling
 					event.stopPropagation();
+				}
+				if (event.axis == 1) {
+					this._state = STATE_WHEEL;
+					this._invokeExtraGesture(event, event.detail < 0 ? "wheel-left" : "wheel-right");
+					// suppress page scroll
+					event.preventDefault();
+					// required to suppress page scroll if using SmoothWheel or Yet Another Smooth Scrolling
+					event.stopPropagation();
+					this._state = STATE_READY;
 				}
 				break;
 			case "click": 

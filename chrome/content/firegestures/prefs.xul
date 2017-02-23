@@ -157,6 +157,7 @@
 	<prefpane id="advancedPane" label="&advancedPane;" flex="1">
 		<preferences>
 			<preference id="pref:wheelgesture"    name="extensions.firegestures.wheelgesture"    type="bool" />
+			<preference id="pref:hwheelGesture"   name="extensions.firegestures.hwheelGesture"   type="bool" />
 			<preference id="pref:rockergesture"   name="extensions.firegestures.rockergesture"   type="bool" />
 			<preference id="pref:keypressgesture" name="extensions.firegestures.keypressgesture" type="bool" />
 			<preference id="pref:tabwheelgesture" name="extensions.firegestures.tabwheelgesture" type="bool" />
@@ -188,6 +189,33 @@
 						       value1="&wheelGesture.down.middle;:"
 						       value2="&wheelGesture.down.right;:" />
 						<menulist id="wheelGestureD" sizetopopup="none" oncommand="gShouldCommit = true;">
+							<menupopup />
+						</menulist>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
+		<groupbox uigroup="hwheelGesture">
+			<caption>
+				<checkbox id="hwheelGesture" label="&hwheelGesture;"
+				          preference="pref:hwheelGesture"
+				          onsyncfrompreference="PrefsUI.updateUIGroup('hwheelGesture');" />
+			</caption>
+			<grid>
+				<columns>
+					<column />
+					<column />
+				</columns>
+				<rows>
+					<row align="center">
+						<label value="&hwheelGesture.left;:" />
+						<menulist id="wheelGestureL" sizetopopup="none" oncommand="gShouldCommit = true;">
+							<menupopup />
+						</menulist>
+					</row>
+					<row align="center">
+						<label value="&hwheelGesture.right;:" />
+						<menulist id="wheelGestureR" sizetopopup="none" oncommand="gShouldCommit = true;">
 							<menupopup />
 						</menulist>
 					</row>

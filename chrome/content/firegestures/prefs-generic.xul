@@ -48,6 +48,7 @@
 		<preferences>
 			<preference id="pref:triggerbutton" name="extensions.firegestures.trigger_button" type="int" />
 			<preference id="pref:wheelgesture"  name="extensions.firegestures.wheelgesture"   type="bool" />
+			<preference id="pref:hwheelgesture" name="extensions.firegestures.hwheelgesture"  type="bool" />
 			<preference id="pref:rockergesture" name="extensions.firegestures.rockergesture"  type="bool" />
 		</preferences>
 		<groupbox uigroup="wheelgesture">
@@ -80,6 +81,33 @@
 						       value1="&wheelGesture.down.middle;:"
 						       value2="&wheelGesture.down.right;:" />
 						<menulist id="wheelGestureD" sizetopopup="none" oncommand="gShouldCommit = true;">
+							<menupopup />
+						</menulist>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
+		<groupbox uigroup="hwheelgesture">
+			<!-- dummy -->
+			<checkbox id="hwheelgesture" hidden="true"
+			          preference="pref:hwheelgesture"
+			          onsyncfrompreference="PrefsUI.updateUIGroup('hwheelgesture');" />
+			<caption label="&hwheelgesture;" />
+			<grid>
+				<columns>
+					<column />
+					<column />
+				</columns>
+				<rows>
+					<row align="center">
+						<label value="&hwheelgesture.left;:" />
+						<menulist id="wheelgestureL" sizetopopup="none" oncommand="gShouldCommit = true;">
+							<menupopup />
+						</menulist>
+					</row>
+					<row align="center">
+						<label value="&hwheelgesture.right;:" />
+						<menulist id="wheelgestureR" sizetopopup="none" oncommand="gShouldCommit = true;">
 							<menupopup />
 						</menulist>
 					</row>

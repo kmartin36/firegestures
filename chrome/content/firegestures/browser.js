@@ -155,6 +155,8 @@ var FireGestures = {
 		switch (aGesture) {
 			case "wheel-up": 
 			case "wheel-down": 
+			case "wheel-left": 
+			case "wheel-right": 
 			case "rocker-left": 
 			case "rocker-right": 
 			case "keypress-ctrl": 

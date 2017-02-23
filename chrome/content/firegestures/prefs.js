@@ -18,6 +18,8 @@ const kFlagsCol     = 4;
 const kExtraArray1 = [
 	["wheelGestureU",  "wheel-up"    ],
 	["wheelGestureD",  "wheel-down"  ],
+	["wheelGestureL",  "wheel-left"  ],
+	["wheelGestureR",  "wheel-right" ],
 	["rockerGestureL", "rocker-left" ],
 	["rockerGestureR", "rocker-right"],
 	["swipeGestureL",  "swipe-left"  ],
